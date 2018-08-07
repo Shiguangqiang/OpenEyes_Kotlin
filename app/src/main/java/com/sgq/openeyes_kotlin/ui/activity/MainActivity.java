@@ -1,7 +1,9 @@
-package com.sgq.openeyes_kotlin;
+package com.sgq.openeyes_kotlin.ui.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.sgq.openeyes_kotlin.R;
 
 public class MainActivity extends AppCompatActivity {
 
