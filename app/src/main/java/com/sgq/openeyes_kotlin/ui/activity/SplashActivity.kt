@@ -19,7 +19,6 @@ import me.weyye.hipermission.HiPermission
 import me.weyye.hipermission.PermissionCallback
 import me.weyye.hipermission.PermissionItem
 
-
 /**
  * Created by Sgq
  * Create Date 2018/8/7 and 15:31
@@ -63,9 +62,7 @@ class SplashActivity : BaseActivity() {
             }
 
             override fun onAnimationRepeat(animation: Animation) {}
-
             override fun onAnimationStart(animation: Animation) {}
-
         })
 
         checkPermission()
@@ -110,6 +107,7 @@ class SplashActivity : BaseActivity() {
                     override fun onDeny(permission: String, position: Int) {
                         Logger.i("permission_onDeny")
                     }
+
 
                     override fun onGuarantee(permission: String, position: Int) {
                         Logger.i("permission_onGuarantee")

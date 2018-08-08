@@ -16,7 +16,7 @@
     <string name="search_result_count">-「%1$s」搜索结果共%2$d个-</string>
 
     <string name="cancel">取消</string>
-    <string name="view_homepage">查看个人主页 ></string>
+    <string name="view_homepage">查看主页 ></string>
     <string name="collection">收藏</string>
     <string name="comment">评论</string>
     <string name="mine_message">我的消息</string>
