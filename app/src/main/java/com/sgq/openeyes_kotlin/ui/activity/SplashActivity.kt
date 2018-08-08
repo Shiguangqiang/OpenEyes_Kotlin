@@ -10,7 +10,7 @@ import android.view.animation.Animation.AnimationListener
 import com.orhanobut.logger.Logger
 import com.sgq.openeyes_kotlin.R
 import com.sgq.openeyes_kotlin.app.MyApplication
-import com.sgq.openeyes_kotlin.showToast
+import com.sgq.openeyes_kotlin.utils.showToast
 import com.sgq.openeyes_kotlin.ui.activity.MainActivity
 import com.sgq.openeys_kotlin.base.BaseActivity
 import com.sgq.openeys_kotlin.utils.AppUtils

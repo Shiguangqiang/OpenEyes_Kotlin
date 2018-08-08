@@ -1,4 +1,4 @@
-package com.sgq.openeyes_kotlin
+package com.sgq.openeyes_kotlin.utils
 
 import android.content.Context
 import android.support.v4.app.Fragment

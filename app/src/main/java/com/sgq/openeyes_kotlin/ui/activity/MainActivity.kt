@@ -7,7 +7,7 @@ import com.flyco.tablayout.listener.CustomTabEntity
 import com.flyco.tablayout.listener.OnTabSelectListener
 import com.sgq.openeyes_kotlin.R
 import com.sgq.openeyes_kotlin.mvp.mode.bean.TabEntity
-import com.sgq.openeyes_kotlin.showToast
+import com.sgq.openeyes_kotlin.utils.showToast
 import com.sgq.openeyes_kotlin.ui.fragment.HomeFragment
 import com.sgq.openeyes_kotlin.ui.fragment.MineFragment
 import com.sgq.openeys_kotlin.base.BaseActivity
