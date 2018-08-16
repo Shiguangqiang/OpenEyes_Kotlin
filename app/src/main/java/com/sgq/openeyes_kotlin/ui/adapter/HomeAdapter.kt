@@ -13,9 +13,10 @@ import cn.bingoogolapple.bgabanner.BGABanner
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.sgq.openeyes_kotlin.R
+import com.sgq.openeyes_kotlin.api.Constants
 import com.sgq.openeyes_kotlin.mvp.mode.bean.HomeBean
+import com.sgq.openeyes_kotlin.ui.activity.VideoDetailActivity
 import com.sgq.openeyes_kotlin.utils.durationFormat
-import com.sgq.openeyes_kotlin.utils.glide.GlideApp
 import com.sgq.openeys_kotlin.view.recyclerview.ViewHolder
 import com.sgq.openeys_kotlin.view.recyclerview.adapter.CommonAdapter
 import io.reactivex.Observable
@@ -226,18 +227,18 @@ class HomeAdapter(context: Context, data: ArrayList<HomeBean.Issue.Item>)
      * @param view
      */
     private fun goToVideoPlayer(activity: Activity, view: View, itemData: HomeBean.Issue.Item) {
-//        val intent = Intent(activity, VideoDetailActivity::class.java)
-//        intent.putExtra(Constants.BUNDLE_VIDEO_DATA, itemData)
-//        intent.putExtra(VideoDetailActivity.Companion.TRANSITION, true)
-//        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
-//            val pair = Pair<View, String>(view, VideoDetailActivity.Companion.IMG_TRANSITION)
-//            val activityOptions = ActivityOptionsCompat.makeSceneTransitionAnimation(
-//                    activity, pair)
-//            ActivityCompat.startActivity(activity, intent, activityOptions.toBundle())
-//        } else {
-//            activity.startActivity(intent)
-//            activity.overridePendingTransition(R.anim.anim_in, R.anim.anim_out)
-//        }
+        val intent = Intent(activity, VideoDetailActivity::class.java)
+        intent.putExtra(Constants.BUNDLE_VIDEO_DATA, itemData)
+        intent.putExtra(VideoDetailActivity.Companion.TRANSITION, true)
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
+            val pair = Pair<View, String>(view, VideoDetailActivity.Companion.IMG_TRANSITION)
+            val activityOptions = ActivityOptionsCompat.makeSceneTransitionAnimation(
+                    activity, pair)
+            ActivityCompat.startActivity(activity, intent, activityOptions.toBundle())
+        } else {
+            activity.startActivity(intent)
+            activity.overridePendingTransition(R.anim.anim_in, R.anim.anim_out)
+        }
     }
 
 

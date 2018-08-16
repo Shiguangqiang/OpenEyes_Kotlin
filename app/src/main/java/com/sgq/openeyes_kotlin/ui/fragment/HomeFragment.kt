@@ -1,5 +1,6 @@
 package com.sgq.openeyes_kotlin.ui.fragment
 
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.support.v4.app.ActivityOptionsCompat
@@ -12,6 +13,7 @@ import com.sgq.openeyes_kotlin.R
 import com.sgq.openeyes_kotlin.mvp.mode.bean.HomeBean
 import com.sgq.openeyes_kotlin.mvp.presenter.HomePresenter
 import com.sgq.openeyes_kotlin.mvp.view.HomeContract
+import com.sgq.openeyes_kotlin.ui.activity.VideoDetailActivity
 import com.sgq.openeyes_kotlin.ui.adapter.HomeAdapter
 import com.sgq.openeyes_kotlin.utils.showToast
 import com.sgq.openeys_kotlin.base.BaseFragment
@@ -27,6 +29,7 @@ import java.util.*
  * Used
  */
 class HomeFragment : BaseFragment(), HomeContract.View {
+
 
     private val mPresenter by lazy { HomePresenter() }
 
@@ -138,9 +141,9 @@ class HomeFragment : BaseFragment(), HomeContract.View {
     private fun openSearchActivity() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             val options = ActivityOptionsCompat.makeSceneTransitionAnimation(activity, iv_search, iv_search.transitionName)
-//            startActivity(Intent(activity, SearchActivity::class.java), options.toBundle())
+            startActivity(Intent(activity, VideoDetailActivity::class.java), options.toBundle())
         } else {
-//            startActivity(Intent(activity, SearchActivity::class.java))
+            startActivity(Intent(activity, VideoDetailActivity::class.java))
         }
     }
 

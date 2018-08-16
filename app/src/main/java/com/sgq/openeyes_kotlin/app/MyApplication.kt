@@ -39,7 +39,6 @@ class MyApplication : Application() {
         DisplayManager.init(this)
         registerActivityLifecycleCallbacks(mActivityLifecycleCallbacks)
 
-
     }
 
 
